@@ -402,39 +402,40 @@ En el caso del cache de redis el mensaje es: "Consulte la base de datos para rev
 2. Crear un archivo docker-compose.yml con el siguiente código:
 ```yml
     version: '3.9'
-    services:
-    #node.js app
-    app:
-        build: yasg07/lab_neo4j
-        container_name: neo4j_api
-        ports:
-        -  "3000:3000"
-        environment:
-        -  REDIS_URL=redis://rediscachedb:6379
-        -  NEO4J_URL=neo4j://neo4jdb:7687
-        depends_on:
-        -  neo4jdb
-        -  rediscachedb
-        volumes:
-        -  .:/usr/src/app
-        -  /usr/src/app/node_modules
-        command: npm start
-    #Neo4j
-    neo4j:
-        image: neo4j
-        container_name: neo4jdb
-        ports:
-        -  "7474:7474"
-        -  "7687:7687"
-        environment:
-        -  NEO4J_AUTH=none
-    #redis-cache-database
-    rediscachedb:
-        image: redis/redis-stack
-        container_name: rediscachedb01
-        ports:
-        -  "6379:6379"
-        -  "8001:8001"
+services:
+  #node.js app
+  app:
+    image: yasg07/lab_neo4j
+    container_name: neo4j_api
+    ports:
+      -  "3000:3000"
+    environment:
+      -  NEO4J_URI=neo4j://neo4jdb:7687
+      -  REDIS_HOST=rediscachedb
+      -  REDIS_PORT=6379
+    depends_on:
+      -  neo4jdb
+      -  rediscachedb
+    volumes:
+      -  .:/usr/src/app
+      -  /usr/src/app/node_modules
+    command: npm start
+  #Neo4j
+  neo4jdb:
+    image: neo4j
+    container_name: neo4jdb
+    ports:
+      -  "7474:7474"
+      -  "7687:7687"
+    environment:
+      -  NEO4J_AUTH=none
+  #redis-cache-database
+  rediscachedb:
+    image: redis/redis-stack
+    container_name: rediscachedb
+    ports:
+      -  "6379:6379"
+      -  "8001:8001"
 ```
 
 3. En el directorio donde se encuentra el docker-compose ejecutar:
