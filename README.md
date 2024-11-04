@@ -401,7 +401,7 @@ En el caso del cache de redis el mensaje es: "Consulte la base de datos para rev
 
 2. Crear un archivo docker-compose.yml con el siguiente código:
 ```yml
-    version: '3.9'
+version: '3.9'
 services:
   #node.js app
   app:
@@ -437,6 +437,7 @@ services:
       -  "6379:6379"
       -  "8001:8001"
 ```
+Nota: si no se tiene instalada la imagen docker de la api eliminar la parte correspondiente del archivo .yml
 
 3. En el directorio donde se encuentra el docker-compose ejecutar:
 ```bash
@@ -447,3 +448,4 @@ services:
 ```bash
     npm start
 ``` 
+Nota: si se tiene instalada la imagen docker de la api no es necesario correr este comando.
