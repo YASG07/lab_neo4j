@@ -4,6 +4,10 @@ const neo4j = require("neo4j-driver");
 const bodyParser = require('body-parser');
 const PORT = 3000;
 
+app.get('/', (req, res) => {
+    res.json({ Message: "Server running..." })
+});
+
 const proveedorRutas = require('./paths/rutasproveedor');
 const productoRutas = require('./paths/rutasproducto');
 
