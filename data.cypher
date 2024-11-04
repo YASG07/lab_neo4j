@@ -189,6 +189,7 @@ merge(cli001)-[dev001:Devolucion {ID: "Dev-001", Fecha: "30-11-2024", Motivo: "T
 merge(cli002)-[dev002:Devolucion {ID: "Dev-002", Fecha: "30-11-2024", Motivo: "Tiene pixeles muertos", Reembolso: "Sí"}]->(pv004)
 merge(cli005)-[dev003:Devolucion {ID: "Dev-003", Fecha: "30-11-2024", Motivo: "Tiene pixeles muertos", Reembolso: "Sí"}]->(pv014)
 merge(cli008)-[dev004:Devolucion {ID: "Dev-004", Fecha: "30-11-2024", Motivo: "Tiene pixeles muertos", Reembolso: "No"}]->(pv023)
+//Copia de esta línea hacia arriba para levantar el escenario de datos
 
 //Query 1: Obtener la lista de productos que tienen menos de 10 unidades en stock.
 match(p:Producto)
