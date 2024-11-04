@@ -1,0 +1,284 @@
+{
+	"info": {
+		"_postman_id": "32beb571-c4b5-4c86-9d65-80f841221a3b",
+		"name": "Neo4j-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31312936"
+	},
+	"item": [
+		{
+			"name": "Query1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/producto/lt10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"producto",
+						"lt10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/pedidocompra/sup-001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"pedidocompra",
+						"sup-001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/producto-categoria/accessory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"producto-categoria",
+						"accessory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/producto/mt5bought",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"producto",
+						"mt5bought"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/proveedores",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"proveedores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query7",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/ventas/mt10k",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"ventas",
+						"mt10k"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query8/14",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"idproveedor2\":\"sup-002\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/cambio-proveedor/sup-001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"cambio-proveedor",
+						"sup-001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query12",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/eliminar-proveedores",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"eliminar-proveedores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query13",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/eliminar-productos/accessory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"eliminar-productos",
+						"accessory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query15",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/eliminar-clientes%devoluciones",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"eliminar-clientes%devoluciones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":\"SUP-006\",\n    \"nombre\":\"Global Electronics Ltd.\",\n    \"pais\":\"China\",\n    \"telefono\":\"+86 10 9876 5432\",\n    \"correo\":\"info@globalelectronics.cn\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/nuevo-proveedor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"nuevo-proveedor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"idproveedor\":\"SUP-006\",\n    \"idproducto\":\"WR-006\",\n    \"id\":\"PC-016\",\n    \"pedido\":\"27-03-2024\",\n    \"recibido\":\"04-04-2024\",\n    \"cantidad\":10.0,\n    \"precio\":1290.0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/nuevo-pedido%compra",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"nuevo-pedido%compra"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
