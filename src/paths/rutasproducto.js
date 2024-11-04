@@ -6,7 +6,7 @@ const cache = require("./logger");
 
 
 var driver = neo4j.driver(
-   'neo4j://127.0.0.1',
+   process.env.NEO4J_URI || "neo4j://localhost:7687",
    neo4j.auth.basic('neo4j', 'neo4j')
 );
 
